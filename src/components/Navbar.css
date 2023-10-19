@@ -1,0 +1,28 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 20px;
+    background-color: rgb(40, 145, 243);
+    position:sticky;
+    top:0px;
+}
+.navbar h3{
+    font-size: 25px;
+}
+
+
+
+.options{
+    padding: 10px;
+    display: flex;
+}
+.options button{
+    padding: 8px;
+    margin: 5px;
+    background-color: rgb(40, 145, 243);
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    border: none;
+}

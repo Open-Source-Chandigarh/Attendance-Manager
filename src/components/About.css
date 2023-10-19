@@ -1,0 +1,19 @@
+.about{
+    padding: 50px;
+}
+.note{
+    padding: 20px;
+    margin: 50px;
+    background-color: yellow;
+    border-radius: 20px;
+}
+
+
+@media screen and (max-width: 800px) {
+    .about{
+        padding: 20px;
+    }
+    .note{
+        margin: 10px;
+    }
+}

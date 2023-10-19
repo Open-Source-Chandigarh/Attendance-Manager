@@ -1,0 +1,87 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #ffffff;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 10px 50px;
+}
+h2{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.card{
+  background-color: #f7ffff;
+  border: 2px solid black;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 25px 25px 0px 0px;
+  padding: 10px;
+  grid-column: span 2;
+}
+.cardwithbutton{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 0.66fr;
+}
+.cardwithbutton>button{
+  border-radius: 0px 0px 25px 25px;
+  border-top: none;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+}
+.present{
+  background-color: rgb(53, 255, 53);
+}
+.absent{
+  background-color: rgb(255, 91, 91);
+}
+.delete_edit{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete_edit button{
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.delete_edit .bttn :nth-child(1){
+  color: red;
+}
+.delete_edit .bttn :nth-child(2){
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 800px) {
+  .navbar{
+    flex-direction: column;
+  }
+  .cards{
+    grid-template-columns: 1fr;
+    padding: 10px;
+    margin-top: 20px;
+  }
+}
