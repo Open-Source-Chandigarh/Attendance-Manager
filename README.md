@@ -73,5 +73,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### Credits
 
 Maintained by Udayan Sharma, Graphics Head, Open Source Chandigarh (https://www.github.com/hollermay)
+
 Repository contributed by Anshul Jain, Technical Team, Open Source Chandigarh (https://www.github.com/anshuljain8110)
 
