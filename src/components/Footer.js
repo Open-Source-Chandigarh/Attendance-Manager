@@ -4,10 +4,12 @@ export default function Footer() {
   let style={
     position:"fixed",
     bottom:"0px",
-    padding:"3px",
+    padding:".5em",
     width:"100%",
     textAlign:"center",
-    backgroundColor:"rgb(40, 145, 243)"
+    backgroundColor:"#6246ea",
+    color:"#fffffe",
+    fontWeight:"bold"
   }
   return (
     <footer>
