@@ -1,28 +1,34 @@
+:root{
+    --base-color:#6246ea;
+}
 .navbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px 20px;
-    background-color: rgb(40, 145, 243);
+    padding: .7em 5%;
+    background-color: var(--base-color);
     position:sticky;
     top:0px;
+    box-shadow: 0 2px 5px #222;
 }
 .navbar h3{
     font-size: 25px;
+    color: #fff;
 }
 
 
 
 .options{
-    padding: 10px;
+    padding: auto;
     display: flex;
 }
 .options button{
     padding: 8px;
     margin: 5px;
-    background-color: rgb(40, 145, 243);
+    background-color: var(--base-color);
     color: white;
     text-decoration: none;
     font-size: 17px;
     border: none;
+    cursor: pointer;
 }
