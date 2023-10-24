@@ -20,13 +20,21 @@ function App() {
     func()
   },[])
   return (
-    <>
+    <div  className="App" style={{
+      display:'flex',
+      flexDirection:'column',
+      justifyContent:'space-between',
+      height:'100vh',
+      width:'100%'
+  }}>
+    
       <Navbar data={data} setnav={setnav} />
         {nav==="/"?(data?<AllSubjects Data={data} changeData={setdata} setnav={setnav}/>:<AddUser changeData={setdata} />):""}
         {nav==="add"?<AddSubject changeData={setdata} setnav={setnav}/>:"" }   
         {nav==="about"?<About/>:""}    
       <Footer/>
-    </>
+     
+    </div>
   );
 }
 

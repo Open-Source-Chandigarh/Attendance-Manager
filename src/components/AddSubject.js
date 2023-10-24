@@ -64,7 +64,7 @@ export default function AddSubject(props) {
 					required
 					placeholder="Number Of Total Classes"
 				/>
-				<button type="submit">Submit</button>
+				<button type="submit" className="btn">Submit</button>
 			</form>
 		</div>
 	);
