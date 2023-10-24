@@ -1,69 +1,101 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-body{
+body {
   background-color: #fffffe;
 }
 
-.cards{
+.cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   padding: 10px 50px;
 }
-h2{
+
+h2 {
   text-align: center;
   margin-top: 20px;
 }
 
-.card{
-  background-color: #f7ffff;
-  border: 2px solid black;
-  border-bottom: none;
+.sub_name {
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+.card {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border-radius: 25px 25px 0px 0px;
   padding: 10px;
   grid-column: span 2;
 }
-.cardwithbutton{
+
+.card-main {
+  background-color: #e7e9eb;
+  border-radius: 1.8vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 0.66fr;
+  gap: 2vw 3vw;
+  overflow: hidden;
+  /* width: 100%; */
+  padding: 1vw 2vw;
+  transition-duration: 0.7s;
 }
-.cardwithbutton>button{
-  border-radius: 0px 0px 25px 25px;
-  border-top: none;
+
+.card-main:hover {
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+}
+
+.card-main>button {
+  border-radius: 1vw;
+  border: none;
+  cursor: pointer;
   color: rgb(255, 255, 255);
-  font-size: 25px;
+  font-size: 1.6vw;
+  padding: 1vw 2vw;
 }
-.present{
-  background-color: rgb(53, 255, 53);
+
+.present {
+  background-color: #ff0000;
 }
-.absent{
-  background-color: rgb(255, 91, 91);
+
+.absent {
+  background-color: #2cba00;
 }
-.delete_edit{
+
+.delete_edit {
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
 }
 
-.delete_edit button{
-  background-color: white;
-  border: none;
-  cursor: pointer;
+.delete_edit p {
+  font-size: 1.5vw;
+  font-weight: bold;
   margin: 10px;
 }
 
-.delete_edit .bttn :nth-child(1){
+.delete_edit button {
+  background-color: darkgrey;
+  border: none;
+  border-radius: 0.5vw;
+  cursor: pointer;
+  margin: 0.4vw;
+  padding: 0.6vw;
+}
+
+.delete_edit button:hover {
+  background-color: #0004ff;
+}
+
+.delete_edit .bttn :nth-child(1) {
   color: red;
 }
-.delete_edit .bttn :nth-child(2){
+
+.delete_edit .bttn :nth-child(2) {
   color: black;
 }
 
@@ -76,12 +108,25 @@ h2{
 
 
 @media screen and (max-width: 800px) {
-  .navbar{
+  .navbar {
     flex-direction: column;
   }
-  .cards{
+
+  .cards {
     grid-template-columns: 1fr;
-    padding: 10px;
+    padding: 5vw;
     margin-top: 20px;
+  }
+
+  .delete_edit p {
+    font-size: 2.7vw;
+  }
+
+  .sub_name {
+    font-size: 4vw;
+  }
+
+  .card-main>button {
+    font-size: 4vw;
   }
 }
