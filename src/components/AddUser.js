@@ -17,7 +17,7 @@ export default function AddUser(props) {
       <form onSubmit={adduser}>
         <input type="text" value={name} onChange={e => { setname(e.target.value) }} placeholder='Enter You Name' />
         <input type="text" value={roll} onChange={e => { setroll(e.target.value) }} placeholder='Enter your Roll Number' />
-        <button type="submit">Start Journey</button>
+        <button type="submit" className='btn'>Start Journey</button>
       </form>
     </div>
   )
