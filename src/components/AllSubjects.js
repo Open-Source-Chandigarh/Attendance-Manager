@@ -6,7 +6,7 @@ export default function AllSubjects(props) {
   let a = props.Data.subject
   return (
     <>
-      <h2>Welcome {props.Data.name} <br/> ({props.Data.roll})</h2>
+      <h1 className='heading'>Welcome {props.Data.name} <br/> ({props.Data.roll})</h1>
       {a.length===0?<AddSubject changeData={props.changeData} setnav={props.setnav}/>:
       <div className='cards'>
         {a.map((e,i)=>{
