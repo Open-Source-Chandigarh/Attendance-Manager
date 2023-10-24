@@ -1,19 +1,55 @@
-.about{
-    padding: 50px;
+.about>h1{
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 4rem;
+    color: #6246ea;
+}
+.content{
+    margin-top: 4rem;
+    margin-left: 3rem;
+    font-size: 1.6rem;
+    width:65%;
+}
+.para1,.para2,.para3{
+    padding-bottom: 2em;
 }
 .note{
-    padding: 20px;
-    margin: 50px;
+    padding: 1rem;
+    margin: 3rem;
     background-color: yellow;
     border-radius: 20px;
+    width:65%;
+}
+.lottie-file{
+    position: absolute;
+    top: 10rem;
+    right: 3rem;
+    width: 30%;
+
 }
 
 
 @media screen and (max-width: 800px) {
-    .about{
-        padding: 20px;
-    }
     .note{
-        margin: 10px;
+        padding: 2rem;
+        margin: 2rem;
+        border-radius: 1rem;
+    }
+    .content{
+        margin-top: 2rem;
+        font-size: 0.9rem;
+    }
+
+
+    .lottie-file{
+
+        top: 15rem;
+        right:0.4rem;
+        width: 25%;
+    }
+
+    .about>h1{
+        margin-top: 3rem;
+        font-size: 2rem;
     }
 }
