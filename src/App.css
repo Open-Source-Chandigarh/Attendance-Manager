@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,400&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -5,6 +7,7 @@
 
 body{
   background-color: #fffffe;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .cards{
@@ -66,11 +69,62 @@ h2{
 .delete_edit .bttn :nth-child(2){
   color: black;
 }
+/* CSS for the SingleSubject component */
+.subject-card {
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.card-details {
+  display: flex;
+  flex-direction: column;
+}
 
+.subject-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
 
+attendance-count {
+  font-size: 1rem;
+}
 
+.action-buttons {
+  margin-top: 10px;
+}
 
+.delete-button {
+  background-color: #ff5733;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.attendance-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.circular-progress {
+  width: 100px;
+  height: 100px;
+}
+.heading{
+  text-align: center;
+  margin-top: -50px;
+  color: #6246ea;
+  text-decoration: underline;
+}
 
 
 
