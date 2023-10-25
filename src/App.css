@@ -1,137 +1,137 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,400&display=swap");
 
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  background-color: #fffffe;
-  font-family: 'Open Sans', sans-serif;
+    background-color: #fffffe;
+    font-family: "Open Sans", sans-serif;
 }
 
 .cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  padding: 10px 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 10px 50px;
 }
 
 h2 {
-  text-align: center;
-  margin-top: 20px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .heading {
-  text-align: center;
-  /* margin-top: -50px; */
-  color: #6246ea;
-  text-decoration: underline;
+    text-align: center;
+    /* margin-top: -50px; */
+    color: #6246ea;
+    text-decoration: underline;
 }
 
 .sub_name {
-  font-size: 2vw;
-  font-weight: bold;
+    font-size: 2vw;
+    font-weight: bold;
 }
 
 .card {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 10px;
-  grid-column: span 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    grid-column: span 2;
 }
 
 .card-main {
-  background-color: #e7e9eb;
-  border-radius: 1.8vw;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2vw 3vw;
-  overflow: hidden;
-  /* width: 100%; */
-  padding: 1vw 2vw;
-  transition-duration: 0.7s;
+    background-color: #e7e9eb;
+    border-radius: 1.8vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw 3vw;
+    overflow: hidden;
+    /* width: 100%; */
+    padding: 1vw 2vw;
+    transition-duration: 0.7s;
 }
 
 .card-main:hover {
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
-.card-main>button {
-  border-radius: 1vw;
-  border: none;
-  cursor: pointer;
-  color: rgb(255, 255, 255);
-  font-size: 1.6vw;
-  padding: 1vw 2vw;
+.card-main > button {
+    border-radius: 1vw;
+    border: none;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-size: 1.6vw;
+    padding: 1vw 2vw;
 }
 
 .present {
-  background-color: #2cba00;
+    background-color: #2cba00;
 }
 
 .absent {
-  background-color: #ff0000;
+    background-color: #ff0000;
 }
 
 .delete_edit {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .delete_edit p {
-  font-size: 1.5vw;
-  font-weight: bold;
-  margin: 10px;
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin: 10px;
 }
 
 .delete_edit button {
-  background-color: darkgrey;
-  border: none;
-  border-radius: 0.5vw;
-  cursor: pointer;
-  margin: 0.4vw;
-  padding: 0.6vw;
+    background-color: darkgrey;
+    border: none;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    margin: 0.4vw;
+    padding: 0.6vw;
 }
 
 .delete_edit button:hover {
-  background-color: #0004ff;
+    background-color: #0004ff;
 }
 
 .delete_edit .bttn :nth-child(1) {
-  color: red;
+    color: red;
 }
 
 .delete_edit .bttn :nth-child(2) {
-  color: black;
+    color: black;
+}
+a {
+    text-decoration: none;
 }
 
-
-
-
 @media screen and (max-width: 800px) {
-  .navbar {
-    flex-direction: column;
-  }
+    .navbar {
+        flex-direction: column;
+    }
 
-  .cards {
-    grid-template-columns: 1fr;
-    padding: 5vw;
-    margin-top: 20px;
-  }
+    .cards {
+        grid-template-columns: 1fr;
+        padding: 5vw;
+        margin-top: 20px;
+    }
 
-  .delete_edit p {
-    font-size: 2.7vw;
-  }
+    .delete_edit p {
+        font-size: 2.7vw;
+    }
 
-  .sub_name {
-    font-size: 4vw;
-  }
+    .sub_name {
+        font-size: 4vw;
+    }
 
-  .card-main>button {
-    font-size: 4vw;
-  }
+    .card-main > button {
+        font-size: 4vw;
+    }
 }
