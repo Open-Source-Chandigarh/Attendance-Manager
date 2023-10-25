@@ -19,7 +19,7 @@ export default function AddSubject(props) {
 		e.preventDefault();
 		if (atten > absnt) {
 			alert(
-				"Attended classes couldnt be grater than total number of classes"
+				"Attended classes couldn't be greater than total number of classes"
 			);
 		} else {
 			let data = localStorage.getItem("attendenceData");
@@ -47,7 +47,7 @@ export default function AddSubject(props) {
 					required
 				/>
 				<input
-					type="text"
+					type="number"
 					value={atten}
 					onChange={(e) => {
 						handleInputChange(e, 0);
@@ -56,7 +56,7 @@ export default function AddSubject(props) {
 					placeholder="Attended Classes"
 				/>
 				<input
-					type="text"
+					type="number"
 					value={absnt}
 					onChange={(e) => {
 						handleInputChange(e, 1);
