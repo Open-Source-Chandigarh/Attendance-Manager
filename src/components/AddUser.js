@@ -15,7 +15,7 @@ export default function AddUser(props) {
       <h1>Looks Like You Are A New User ☺️</h1>
       <h4>Fill The Form To Start Your New Journey</h4>
       <form onSubmit={adduser}>
-        <input type="text" value={name} onChange={e => { setname(e.target.value) }} placeholder='Enter You Name' />
+        <input type="text" value={name} onChange={e => { setname(e.target.value) }} placeholder='Enter Your Name' />
         <input type="text" value={roll} onChange={e => { setroll(e.target.value) }} placeholder='Enter your Roll Number' />
         <button type="submit" className='btn'>Start Journey</button>
       </form>

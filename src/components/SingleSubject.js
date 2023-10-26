@@ -4,31 +4,32 @@ import 'react-circular-progressbar/dist/styles.css';
 
 export default function SingleSubject(props) {
   const { data, i, changeData } = props;
-  const [name, [attended, total]] = Object.entries(data)[0];
+  const { subjectName, attendance, teacher } = data;
+  const [attended, total] = attendance;
   const percentage = (attended / total) * 100;
 
   const update = async (isAttended) => {
-    let attendenceData = JSON.parse(localStorage.getItem('attendenceData'));
-    const subjectData = attendenceData.subject[i][name];
+    let attendanceData = JSON.parse(localStorage.getItem('attendenceData'));
+    const subjectData = attendanceData.subject[i];
 
     if (isAttended) {
-      subjectData[0]++; // Increment attended
+      subjectData.attendance[0]++; // Increment attended
     }
 
-    subjectData[1]++; // Increment total
-    attendenceData.subject[i][name] = subjectData;
+    subjectData.attendance[1]++; // Increment total
+    attendanceData.subject[i] = subjectData;
 
-    localStorage.setItem('attendenceData', JSON.stringify(attendenceData));
-    changeData(attendenceData);
+    localStorage.setItem('attendenceData', JSON.stringify(attendanceData));
+    changeData(attendanceData);
   };
 
   const del = async () => {
     const isConfirmed = window.confirm('Do you really want to delete the subject?');
     if (isConfirmed) {
-      let attendenceData = JSON.parse(localStorage.getItem('attendenceData'));
-      attendenceData.subject.splice(i, 1);
-      localStorage.setItem('attendenceData', JSON.stringify(attendenceData));
-      changeData(attendenceData);
+      let attendanceData = JSON.parse(localStorage.getItem('attendenceData'));
+      attendanceData.subject.splice(i, 1);
+      localStorage.setItem('attendenceData', JSON.stringify(attendanceData));
+      changeData(attendanceData);
     }
   };
 
@@ -36,7 +37,8 @@ export default function SingleSubject(props) {
     <div className='card-main'>
       <div className='card'>
         <div className='sub_name'>
-          <p>{name}</p>
+          <p>Subject Name: {subjectName}</p>
+          <p>Teacher Name: {teacher}</p>
         </div>
         <div className='delete_edit'>
           <p>{`${attended}/${total}`}</p>
@@ -47,7 +49,7 @@ export default function SingleSubject(props) {
               </svg>
             </button>
             {/* <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l 2.414-.805a.5.5 0 0 0 .196-.12l 6.813-6.814z" />
                 <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
               </svg></button> */}
           </div>
@@ -58,22 +60,10 @@ export default function SingleSubject(props) {
             value={percentage}
             text={`${Math.round((percentage + Number.EPSILON) * 100) / 100}%`}
             styles={buildStyles({
-              // Rotation of path and trail, in number of turns (0-1)
               rotation: 0.25,
-
-              // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
               strokeLinecap: 'round',
-
-              // Text size
               textSize: '16px',
-
-              // How long animation takes to go from one percentage to another, in seconds
               pathTransitionDuration: 1.5,
-
-              // Can specify path transition in more detail, or remove it entirely
-              // pathTransition: 'none',
-
-              // Colors
               pathColor: `rgba(62, 152, 199, ${percentage / 100})`,
               textColor: '#f88',
               trailColor: '#d6d6d6',

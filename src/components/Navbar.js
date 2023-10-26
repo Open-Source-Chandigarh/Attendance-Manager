@@ -13,7 +13,7 @@ export default function Navbar(props) {
   return (
     <div className='navbar'>
       <div>
-        <h3>Attendence Manager</h3>
+        <h3>Attendance Manager</h3>
       </div>
       <div className='options'>
         <button onClick={()=>props.setnav("/")}>Home</button>
