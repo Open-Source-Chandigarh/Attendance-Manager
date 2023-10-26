@@ -4,9 +4,7 @@ export default function Footer() {
   let style = {
     position: 'relative',
     bottom: '0',
-    bottom: "0px",
     padding: ".5em",
-    width: "100%",
     textAlign: "center",
     backgroundColor: "#6246ea",
     color: "#fffffe",

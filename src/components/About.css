@@ -1,54 +1,76 @@
-.about>h1{
+.about>h1 {
     text-align: center;
     margin-top: 3rem;
     font-size: 4rem;
     color: #6246ea;
 }
-.content{
-    margin-top: 4rem;
-    margin-left: 3rem;
-    font-size: 1.6rem;
-    width:65%;
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.para1,.para2,.para3{
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    margin-top: 3rem;
+}
+
+.content {
+    margin-top: 4rem;
+    font-size: 1.6rem;
+    width: 65%;
+}
+
+.para1,
+.para2,
+.para3 {
     padding-bottom: 2em;
 }
-.note{
+
+.note {
     padding: 1rem;
-    margin: 3rem;
     background-color: yellow;
     border-radius: 20px;
-    width:65%;
+    width: 60%;
+    margin-bottom: 5vw;
 }
-.lottie-file{
-    position: absolute;
-    top: 10rem;
-    right: 3rem;
-    width: 30%;
+
+.lottie-file {
+    position: relative;
+
+    width: 25%;
 
 }
 
 
 @media screen and (max-width: 800px) {
-    .note{
+    .note {
         padding: 2rem;
-        margin: 2rem;
         border-radius: 1rem;
     }
-    .content{
+
+    .content {
         margin-top: 2rem;
         font-size: 0.9rem;
+        width: 100%;
+    }
+
+    .about-content {
+        flex-direction: column;
+        margin-top: 2rem;
+        width: 90%;
     }
 
 
-    .lottie-file{
-
-        top: 15rem;
-        right:0.4rem;
-        width: 25%;
+    .lottie-file {
+        width: 60%;
     }
 
-    .about>h1{
+    .about>h1 {
         margin-top: 3rem;
         font-size: 2rem;
     }
