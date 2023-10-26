@@ -4,6 +4,7 @@ export default function AddSubject(props) {
 	const [subj, setsubj] = useState("");
 	const [atten, setatten] = useState();
 	const [absnt, setabsnt] = useState();
+	const [teacher, setTeacher] = useState(""); // Add subject teacher state
 
 	const handleInputChange = (e, status) => {
 		const value = e.target.value;
@@ -19,13 +20,15 @@ export default function AddSubject(props) {
 		e.preventDefault();
 		if (atten > absnt) {
 			alert(
-				"Attended classes couldn't be greater than total number of classes"
+				"Attended classes cannot be greater than the total number of classes"
 			);
 		} else {
 			let data = localStorage.getItem("attendenceData");
 			data = await JSON.parse(data);
 			let a = {};
-			a[subj] = [atten, absnt];
+			a.subjectName = subj;
+			a.attendance = [atten, absnt];
+			a.teacher = teacher; // Add subject teacher to the data
 			data.subject.push(a);
 			props.changeData(data);
 			data = JSON.stringify(data);
@@ -33,6 +36,7 @@ export default function AddSubject(props) {
 			props.setnav("/");
 		}
 	};
+
 	return (
 		<div className="adduser">
 			<form onSubmit={manageData} action="/">
@@ -63,6 +67,14 @@ export default function AddSubject(props) {
 					}}
 					required
 					placeholder="Number Of Total Classes"
+				/>
+				<input
+					type="text" // Input field for subject teacher
+					value={teacher}
+					onChange={(e) => {
+						setTeacher(e.target.value);
+					}}
+					placeholder="Subject Teacher"
 				/>
 				<button type="submit" className="btn">Submit</button>
 			</form>
